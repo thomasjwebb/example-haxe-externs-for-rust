@@ -1,11 +1,14 @@
-all: target/sin
-	target/sin
+all: bin/pythagorean/Main
+	bin/pythagorean/Main
 
 target:
 	mkdir -p $@
 
 bin:
 	mkdir -p $@
+
+bin/pythagorean/Main: target/debug/libmath.a
+	haxe build.hxml
 
 bin/main: bin/main.o bin/math.o target/debug/libmath.a
 	$(CXX) -o $@ src/main.cpp bin/math.o target/debug/libmath.a
@@ -20,4 +23,4 @@ bin/math.o: src/Math.cpp | bin
 	$(CXX) -o $@ -c $<
 
 clean:
-	rm -rf target
+	rm -rf target bin

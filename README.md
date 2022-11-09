@@ -7,3 +7,6 @@ Largely inspired by [this example](https://github.com/sn99/rust-ffi-examples/). 
 Note that this example stuffs all source code in one src directory but I would recommend having rust source in one place, c and c++ together in another and haxe in another. At the very least, in separate dirs but could also be separate repos.
 
 Note that this only shows calling rust from haxe but not the other way around.
+
+This includes C++ wrappers for the C as an example too, but this is not used by hxcpp. haxe/hxcpp simply uses the c bindings that rust generates (with a little help from a header file).
+
