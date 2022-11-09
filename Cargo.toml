@@ -1,0 +1,8 @@
+[package]
+name = "math"
+version = "0.0.1"
+authors = ["Thomas J. Webb <thomas@thomasjwebb.com>"]
+
+[lib]
+name = "math"
+crate-type = ["staticlib"]
